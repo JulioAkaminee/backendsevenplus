@@ -2,6 +2,6 @@
 
 export default function Home() {
  return(<>
- teste
+<h1 style={{textAlign:"center"}}>Apenas backend</h1>
  </>)
 }
