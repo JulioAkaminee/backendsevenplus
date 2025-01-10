@@ -5,6 +5,7 @@ const db = require('../db');  // Importando a conexão com o banco de dados
 
 // Rota GET para obter categorias
 router.get('/', async (req, res) => {
+  res.send("hello")
   const queryCategorias = "SELECT * FROM categories";  // Consulta SQL
 
   try {
