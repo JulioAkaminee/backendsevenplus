@@ -19,5 +19,5 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Exporta o roteador para ser usado no servidor principal
+
 module.exports = router;

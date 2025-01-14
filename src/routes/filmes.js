@@ -22,6 +22,7 @@ router.post('/', async (req, res) => {
     }
 });
 
+//Rota para listar filmesa
 router.get("/", async (req,res)=>{
     const queryFilmes = "SELECT * FROM movies";
 
