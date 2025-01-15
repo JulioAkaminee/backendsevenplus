@@ -8,6 +8,6 @@
     "nodemailer": "^6.9.16"
   },
  "scripts": {
-  "start": "node --watch server.js"
+  "start": "node server.js"
 }
 }
