@@ -2,7 +2,7 @@
 const express = require('express');
 const db = require('../db.js');  // Conexão com o banco de dados
 const nodemailer = require('nodemailer');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const router = express.Router();
 
