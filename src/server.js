@@ -7,6 +7,7 @@ const fimesRouter = require('./routes/filmes')
 const registerRouter = require('./routes/register')
 const loginRouter = require('./routes/login')
 const forgotPasswordRouter = require('./routes/forgotPassword')
+const homepageRouter = require('./routes/homepage')
 
 const app = express();
 const port = 3000
@@ -22,6 +23,7 @@ app.use(cors({
   methods: 'GET,POST',
 }));
 
+app.use('/',homepageRouter)
 app.use('/api/categorias', categoriasRouter);
 app.use('/api/filmes', fimesRouter)
 app.use('/api/register', registerRouter)
