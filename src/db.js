@@ -1,11 +1,11 @@
 const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
-    host: 'viaduct.proxy.rlwy.net',
-    user: 'root',
-    password: 'KAdnonmWhcijkQSFSbCaOjvNQZbiSCrJ',  
-    database: 'railway',
-    port: 58005
+    host: process.env.HOSTDB,
+    user: process.env.USERDB,
+    password: process.env.DBPASSWORD,  
+    database: process.env.DATABASEDB,
+    port: process.env.PORTDB
 });
 
 async function testarConexao() {
