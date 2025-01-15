@@ -66,7 +66,7 @@ router.post('/', async (req, res) => {
     }
 
     // Enviar um e-mail com instruções de recuperação de senha
-    const resetLink = `http://localhost:3010/api/forgotpassword/reset-password?email=${email}`;
+    const resetLink = `https://backendsevenplus.vercel.app/api/forgotpassword/reset-password?email=${email}`;
     await sendEmail(email, 'Recuperação de Senha', `Clique no link para redefinir sua senha: ${resetLink}`);
 
     return res.status(200).send({ message: 'E-mail enviado com sucesso.' });
