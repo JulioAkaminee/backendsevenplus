@@ -9,6 +9,7 @@ const loginRouter = require('./routes/login')
 const forgotPasswordRouter = require('./routes/forgotPassword')
 
 const app = express();
+const port = 3000
 
 // Middleware para o corpo da requisição (JSON)
 app.use(express.json());
@@ -17,7 +18,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use(cors({
-  origin: 'http://localhost:3010', // Se o frontend estiver na porta 3000
+  origin: `http://localhost:${port}`, 
   methods: 'GET,POST',
 }));
 
@@ -29,5 +30,5 @@ app.use('/api/forgotpassword', forgotPasswordRouter)
 
 // Iniciar o servidor na porta 3010
 app.listen(3010, '0.0.0.0', () => {
-  console.log(`Servidor rodando em http://localhost:3010`);
+  console.log(`Servidor rodando em http://localhost:${port}`);
 });
