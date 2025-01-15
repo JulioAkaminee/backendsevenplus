@@ -10,7 +10,7 @@ const forgotPasswordRouter = require('./routes/forgotPassword')
 const homepageRouter = require('./routes/homepage')
 
 const app = express();
-const port = 3000
+const port = process.env.PORT_SERVER
 
 // Middleware para o corpo da requisição (JSON)
 app.use(express.json());
@@ -31,6 +31,6 @@ app.use('/api/login', loginRouter)
 app.use('/api/forgotpassword', forgotPasswordRouter)
 
 // Iniciar o servidor na porta 3010
-app.listen(3010, '0.0.0.0', () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
