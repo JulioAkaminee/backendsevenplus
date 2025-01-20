@@ -17,7 +17,7 @@ app.use(express.json());
 
 
 const corsOptions = {
-  origin: ['https://backendsevenplus.vercel.app', `http://localhost:${port}`], // O domínio permitido
+  origin: ['https://backendsevenplus.vercel.app', `http://localhost:${port}`], 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Métodos permitidos
   allowedHeaders: ['Content-Type', 'Authorization'],  // Cabeçalhos permitidos
 };

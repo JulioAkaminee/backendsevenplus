@@ -10,12 +10,12 @@ const email = process.env.EMAIL_USER
 const pass = process.env.EMAIL_PASS
 
 
-// Configuração do Nodemailer (usando Gmail como exemplo)
+// Configuração do Nodemailer 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: email,  // Seu e-mail
-      pass: pass,  // Sua senha de aplicativo
+      user: email,  
+      pass: pass,  
     },
     tls: {
       rejectUnauthorized: false, // Necessário para permitir a comunicação com servidores de e-mail
@@ -30,7 +30,7 @@ const transporter = nodemailer.createTransport({
     }
   });
   
-// Função para enviar e-mail (usando Promise para compatibilidade com async/await)
+// Função para enviar e-mail 
 const sendEmail = (to, subject, text) => {
   return new Promise((resolve, reject) => {
     const mailOptions = {
@@ -49,7 +49,7 @@ const sendEmail = (to, subject, text) => {
   });
 };
 
-// Rota para solicitar recuperação de senha (sem usar token)
+// Rota para solicitar recuperação de senha 
 router.post('/', async (req, res) => {
   const { email } = req.body;
 
@@ -65,7 +65,7 @@ router.post('/', async (req, res) => {
       return res.status(404).send({ error: 'Usuário não encontrado.' });
     }
 
-    // Enviar um e-mail com instruções de recuperação de senha
+    // Envia um e-mail com instruções de recuperação de senha
     const resetLink = `https://backendsevenplus.vercel.app/api/forgotpassword/reset-password?email=${email}`;
     await sendEmail(email, 'Recuperação de Senha', `Clique no link para redefinir sua senha: ${resetLink}`);
 
@@ -216,7 +216,7 @@ router.get('/reset-password', (req, res) => {
   });
   
   
-// Rota para redefinir a senha (sem usar token)
+// Rota para redefinir a senha 
 router.post('/reset-password', async (req, res) => {
     const { email, newPassword } = req.body;
   
