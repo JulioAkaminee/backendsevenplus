@@ -100,7 +100,7 @@ router.get('/', (req, res) => {
         <div class="endpoint">
             <h3>1. Cadastro de Usuário</h3>
             <p><strong>Método</strong>: POST</p>
-            <p><strong>Endpoint</strong>: /users</p>
+            <p><strong>Endpoint</strong>: /register</p>
             <p><strong>Descrição</strong>: Registra um novo usuário.</p>
             <p><strong>Body (JSON)</strong>:</p>
             <pre><code>{
