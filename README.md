@@ -21,7 +21,7 @@ Esta API foi desenvolvida com Express.js para gerenciar filmes, autenticar usuá
 ### 1. Cadastro de Usuário
 
 **Método**: `POST`  
-**Endpoint**: `/users`  
+**Endpoint**: `/register`  
 **Descrição**: Registra um novo usuário.
 
 **Body (JSON)**:
